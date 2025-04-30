@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 16</title>
+</head>
+<body>
+    <form action="#">
+        <label for="nombre">Nombre</label>
+        <input type="text" max="30" id="nombre"><br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" max="30" id="Apellidos"><br>
+        <label for="email">Email</label>
+        <input type="text" required id="email"><br>
+        <label for="asunto">Asunto</label>
+        <select size="3" id="asunto">
+            <option value="">Pedir presupuesto</option>
+            <option value="">Solicitar cita previa</option>
+            <option value="">Otros</option>
+        </select><br>
+        <label for="met">Como nos conociste</label>
+        <select id="met" multiple>
+            <option value="amigo">Un amigo</option>
+            <option value="google">Googleando</option>
+            <option value="buzon">Buzoneo</option>
+            <option value="otro">Otros</option>
+        </select><br>
+        <label for="texto">Mensaje</label>
+        <input type="text" id="texto" max="300"><br>
+        <input type="checkbox" id="terminos" required>He leído y acepto el <a href="#">aviso legal</a> y la <a href="#">política
+        de privacidad</a> 
+        <input type="button" value="Ahí va eso">
+    </form>
+</body>
+</html>
