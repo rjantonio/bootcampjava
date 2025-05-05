@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02</title>
+</head>
+<body>
+    <form action="post">
+        <fieldset>
+            <legend>Información Personal:</legend>
+            <label for="nombre">Nombre:</label><br><input type="text" required><br><label for="apellido">Apellido:</label><br><input type="text" required><br><label for="fecha">Fecha de nacimiento:</label><br><input type="date" required><br><label for="gender">Género</label><br>
+            <div>
+                <input type="radio" id="masculino" value="masculino" name="gender" checked>
+                <label for="masculino">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" id="femenino" value="femenino" name="gender">
+                <label for="femenino">Femenino</label>
+            </div>
+            <div>
+                <input type="radio" id="otro" value="otro" name="gender">
+                <label for="otro">Otro</label>
+            </div>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Información de Cuenta:</legend>
+            <label for="usuario">Usuario</label><br><input type="text" required><br><label for="contraseña">Contraseña</label><br><input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><label for="conf">Confirmación de Contraseña</label><br><input type="password" required>
+        </fieldset>
+        <fieldset>
+            <legend>Prefencias</legend>
+            <select id="color">
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+            </select>
+            <br>
+            <input type="checkbox" id="terminos" required>Aceptar términos y condiciones
+        </fieldset>
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
