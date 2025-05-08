@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 22</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        /* @keyframes mianimation {
+            from {left: 0;}
+            to {left: calc(100vw - 200px);}
+        } */
+        @keyframes mianimation {
+            from {transform: translateX(0);}
+            to {transform: translateX(calc(100vw - 100%));}
+        }
+        .animate-box {
+            background-color: aqua;
+            width: fit-content;
+            position: absolute;
+            left: 0;
+            animation: linear infinite;
+            animation-name: mianimation;
+            animation-duration: 4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animate-box">Cuadro animado</div>
+</body>
+
+</html>
