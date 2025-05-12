@@ -1,17 +1,16 @@
 * {
     box-sizing: border-box;
 }
-body, html {
-    margin: 0;
-    padding: 0;
-}
 .animate-box {
+    position: relative;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding: 1%;
     width: 100px;
     height: 100px;
     background-color: lightcoral;
-    transition: width .3s, height .3s;
+    transition: transform .3s;
 }
 .animate-box:hover {
-    width: 150px;
-    height: 150px;
+    transform: scale(1.5, 1.5);
 }
