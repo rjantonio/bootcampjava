@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 5%;
+} 
+.grid-container * {
+    background-color: grey;
+    padding: 5%;
+    text-align: center;
+    align-content: center;
+}
+.large {
+    grid-column: span 2;
+}
