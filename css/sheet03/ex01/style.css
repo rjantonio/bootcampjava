@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body, html {
     margin: 0;
@@ -31,16 +32,17 @@ h1 {
 }
 .secuno {
     padding: 15% 30%;
+    align-self: center;
     text-align: center;
-    background-color: rgb(132, 129, 129, .2);
+    background-color: rgb(132, 129, 129, .12);
 }
 #boton {
     padding: 3%;
     margin: 3%;
+    margin-top: 10%;
     background-color: black;
-    width: 60%;
     justify-self: center;
-    padding: 3%;
+    padding: 3% 7%;
     border-radius: 5px;
 }
 #boton * {
@@ -58,12 +60,17 @@ h1 {
     display: flex;
     padding: 5%;
 }
-#sectres article::before {
+#cuadro {
+    margin-bottom: 5%;
     background-color: black;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    aspect-ratio: 1/1;
 }
 #sectres span {
+    max-width: 50px;
+    width: 50px;
+}
+#sectres span#learnmore {
     font-size: 10px;
 }
 .container {
@@ -80,6 +87,9 @@ h1 {
 }
 .container :nth-child(n):nth-child(-n + 5) {
     font-weight: bold;
+}
+.container :nth-child(5n-4) {
+    justify-self: flex-start;
 }
 .item {
     padding: 2%;
