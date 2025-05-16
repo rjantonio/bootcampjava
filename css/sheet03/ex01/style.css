@@ -56,19 +56,15 @@ h1 {
 #secdos * {
     font-weight: normal;
 }
-#sectres {
-    display: flex;
-    padding: 5%;
-}
 #cuadro {
     margin-bottom: 5%;
     background-color: black;
     width: 90%;
     aspect-ratio: 1/1;
 }
-#sectres span {
-    max-width: 50px;
-    width: 50px;
+#sectres {
+    display: flex;
+    padding: 5%;
 }
 #sectres span#learnmore {
     font-size: 10px;
