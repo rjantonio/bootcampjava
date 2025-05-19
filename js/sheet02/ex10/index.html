@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Ejemplo de uso
+        const palabras = ["hola", "mundo", "javascript", "programación", "abd", "11223322112211"];
+        console.log(palabraMasLarga(palabras)); // "programación"
+
+        function palabraMasLarga (arr) {
+            return arr.reduce(function (a, b) {
+                
+                console.log(a.length, b.length);
+
+                return a.length > b.length ? a : b;
+            });
+        }
+    </script>
+</body>
+</html>

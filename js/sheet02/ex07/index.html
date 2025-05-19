@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const texto = "Hola Mundo";
+        const reg = /[aeiou]/gi;
+        const voc = ["a", "e", "i", "o", "u"];
+        console.log(contarVocales(texto)); // 4
+        console.log(contarVocales2(texto)); // 4
+
+        function contarVocales (arr) {
+            return arr.match(reg).length;
+        }
+        function contarVocales2 (arr) {
+            let aux = 0;
+            for ( let i = 0; i < arr.length; i++) {
+                if (voc.includes(arr[i])) {
+                    aux++;
+                }
+            }
+            return aux;
+        }
+    </script>
+</body>
+</html>

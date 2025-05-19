@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const texto = "A man, a plan, a canal, Panama";
+        console.log(esPalindromo(texto)); // true
+        console.log(esPalindromo("Hola mundo")); // false
+
+        function isChar(char) {
+            regExp = new RegExp(/\w/);
+            return char.match(regExp);
+        }
+
+        function esPalindromo (cad) {
+                cad = cad.split('').filter(isChar);
+                cad = cad.join().toLowerCase();
+                return cad == cad.split('').reverse().join('');
+        }
+    </script>
+</body>
+</html>
