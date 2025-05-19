@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10</title>
+</head>
+<body>
+    <button id="boton">Botón</button>
+    <br>
+    <input type="text" name="" id="texto">
+    <button id="boton2">Botón 2</button>
+    <script>
+        let boton = document.getElementById('boton');
+        let boton2 = document.getElementById('boton2');
+        let texto = document.getElementById('texto');
+
+        boton.addEventListener('click', function(e) {
+            console.log('Botón pulsado');
+        });
+        boton2.addEventListener('click', function(e) {
+            console.log(texto.value);
+        });
+    </script>
+</body>
+</html>

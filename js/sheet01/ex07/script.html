@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dias_semana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+        let numeros = [1, 2, 3, 4, 5];
+
+        for (let i = 0; i < dias_semana.length; i++) {
+            console.log(dias_semana[i]);
+        }
+
+        console.log(sumarArreglo(numeros));
+        
+        function sumarArreglo(num) {
+            let aux = 0;
+            for (let j = 0; j < num.length; j++) {
+                aux += num[j];
+            }
+            return aux;
+        }
+        
+    </script>
+</body>
+
+</html>
