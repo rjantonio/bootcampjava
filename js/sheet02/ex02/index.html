@@ -8,10 +8,39 @@
 <body>
     <script>
         const palabras = ["banana", "manzana", "naranja", "uva", "azafrán"];
+        const numeros = [1,2,3,5,67,88,8,23,54,73,2,4,10,0];
         console.log(ordenarPalabras(palabras)); // ["banana", "manzana", "naranja", "uva"]
+        console.log(ordNum(numeros));
+        console.log(dobleSort(numeros));
 
+        function esPar (num) {
+            return num % 2 == 0;
+        }
         function ordenarPalabras(arr) {
             return arr.sort();
+        }
+        function ordNum (arr) {
+            /* return arr.sort(function (a, b) {
+                if (esPar(a) && esPar(b) && a < b) return -1;
+                if (esPar(a) && esPar(b) && a > b) return 1;
+                if (!!esPar(a) && !!esPar(b) && a < b) return -1;
+                if (!!esPar(a) && !!esPar(b) && a > b) return 1;
+                if (esPar(a) && !esPar(b)) return -1;
+                if (!esPar(a) && esPar(b)) return 1;
+            }); */
+            return arr.sort(function (a, b) {
+                if ((esPar(a) == esPar(b)) && a < b) return -1;
+                if ((esPar(a) == esPar(b)) && a > b) return 1;
+                if (esPar(a) && !esPar(b)) return -1;
+                if (!esPar(a) && esPar(b)) return 1;
+            });
+        }
+        function dobleSort (num) {
+            return num.sort(function (a, b) {
+                return a - b;
+            }).sort(function (a, b) {
+                return a % 2 == 0 ? -1 : 1;
+            });
         }
     </script>
 </body>
