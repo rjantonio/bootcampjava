@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+        <button type="submit">Enviar</button>
+        <p id="error" style="display: none;"></p>
+    </form>
+</body>
+
+<script>
+    let pError = document.getElementById('error');
+    let boton = document.querySelector('button[type=submit]');
+    let form = document.getElementById('formulario');
+
+    form.addEventListener('submit', (e) => {
+        if (e.target.nombre.value == '') {
+            e.preventDefault();
+            pError.style.display = 'block';
+            pError.style.color = 'red';
+            pError.innerHTML = 'Por favor, rellena el campo';
+        }
+    })
+
+    function validar(e) {
+        let form2 = document.getElementById('formulario');
+        console.log(form2);
+        return false;
+    }
+
+</script>
+
+</html>

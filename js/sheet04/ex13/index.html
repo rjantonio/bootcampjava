@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="divs">Hola que tal¿?</div>
+    <div class="divs">Hola que tal¿?</div>
+    <div class="divs activo">Hola que tal¿?</div>
+    <div class="divs">Hola que tal¿?</div>
+    <div class="divs activo">Hola que tal¿?</div>
+    <button>Cambiar todos</button>
+</body>
+</html>
+<style>
+    div:not(.activo) {
+        color: aqua;
+    }
+    div.activo {
+        color: blue;
+    }
+</style>
+<script>
+    let divs = document.querySelectorAll('.divs');
+    let boton = document.querySelector('button');
+
+    boton.addEventListener('click', () => {
+        divs.forEach((e) => {
+            e.classList.toggle('activo');
+        });
+    })
+</script>

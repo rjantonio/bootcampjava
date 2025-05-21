@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contador__container">
+        <button class="dec">Decrementar</button>
+        <div class="num">0</div>
+        <button class="inc">Incrementar</button>
+    </div>
+</body>
+</html>
+    <script>
+        let dec = document.querySelector('.dec');
+        let inc = document.querySelector('.inc');
+        let num = document.querySelector('.num');
+
+        dec.addEventListener('click', () => {
+            num.innerHTML = parseInt(num.innerHTML) - 1;
+        });
+        inc.addEventListener('click', () => {
+            num.innerHTML = parseInt(num.innerHTML) + 1;
+        });
+        
+    </script>

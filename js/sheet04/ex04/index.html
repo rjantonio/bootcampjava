@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div-imagen">
+        <img class="imagen" src="https://www.educima.com/imagen-alegre-s19863.jpg" alt="">
+    </div>
+
+    <button>Tócame</button>
+
+    <script>
+        let img = document.querySelector('img');
+        let boton = document.querySelector('button');
+        let bool = true;
+
+        boton.addEventListener('click', () => {
+            if (bool == true) {
+                img.src = 'https://www.educima.com/imagen-triste-s19861.jpg';
+                bool = false;
+            } else {
+                img.src = 'https://www.educima.com/imagen-alegre-s19863.jpg';
+                bool = true;
+            }
+            document.querySelector('.div-imagen').classList.toggle('div-imagen--unhappy');
+        });
+    </script>
+    <style>
+        .div-imagen {
+            background-color: green;
+        }
+        .div-imagen--unhappy {
+            background-color: red;
+        }
+    </style>
+</body>
+</html>

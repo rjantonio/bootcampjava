@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="caja">Elemento 1</div>
+    <div class="caja">Elemento 2</div>
+    <div class="caja">Elemento 3</div>
+    <div class="caja">Elemento 4</div>
+    <div class="caja">Elemento 5</div>
+
+    <button>Cambiar color</button>
+</body>
+</html>
+<script>
+    let boton = document.querySelector('button');
+    let elementos = document.querySelectorAll('.caja');
+
+    boton.addEventListener('click', () => {
+        console.log(elementos)
+        elementos.forEach((e) => {
+            e.style.background = 'yellow';
+        });
+    })
+</script>

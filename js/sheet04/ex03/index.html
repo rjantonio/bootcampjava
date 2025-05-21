@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="añadir">Añade</button><button id="eliminar">Elimina</button>
+
+    <ul>
+        <li>1</li>
+    </ul>
+    <script>
+        let añade = document.getElementById('añadir');
+        let elimina = document.getElementById('eliminar');
+        let miUl = document.querySelector('ul');
+
+        añade.addEventListener('click', () => {
+            console.log(miUl);
+            miUl.appendChild(document.createElement('li'));
+        });
+        elimina.addEventListener('click', () => {
+            miUl.removeChild(miUl.lastChild);
+        });
+    </script>
+</body>
+</html>
