@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
+
+<script>
+    let form = document.querySelector("form");
+    let boton = document.querySelector("button");
+    const API_URL = "https://jsonplaceholder.typicode.com/posts";
+
+    async function obtenerDatos() {
+        try {
+            const response = await fetch(API_URL);
+            const datos = await response.json();
+
+            console.log(datos);
+            datos.forEach((element) => {
+                console.log(element);
+            })
+        } catch(error) {
+            console.log(error);
+        }
+    }
+
+    boton.addEventListener('click', (e) => {
+        e.preventDefault();
+        obtenerDatos();
+    });
+    
+</script>

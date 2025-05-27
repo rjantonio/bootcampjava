@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const rapida = () =>  {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("rápida");
+                }, 500);
+            });
+        }
+        const lenta = () => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("lenta");
+                }, 1500);
+            });
+        }
+
+        Promise.race([rapida(), lenta()])
+            .then((result) => {
+                console.log(result);
+            })
+    </script>
+</body>
+</html>
