@@ -36,7 +36,6 @@ async function getEvolve(num) {
 
 }
 
-
 async function muestra(data) {
     const container = document.querySelector(".container");
     const miArticle = document.createElement("article");
